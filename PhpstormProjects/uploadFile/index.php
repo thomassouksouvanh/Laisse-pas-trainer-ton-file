@@ -12,23 +12,11 @@
   </head>
   <body>
     <h1>Upload File!</h1>
-
-    <form action="uploadMultiple.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="fichier" multiple ="multiple"/>
-        <input type="submit" name ="submit" value="Send" />
+    <form action="uploadMultiple.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple/>
+        <input type="submit" value="Upload"/>
     </form>
 
-<?php
-    echo "<h1>Uploaded : </h1>";
-
-if ($files) {
-        echo "<ul>";
-        foreach ($files as $file) {
-            echo "<li>$file</li>";
-            echo "</ul>";
-        }
-    }
-?>
 
 
     <!-- Optional JavaScript -->
